@@ -1,1 +1,1 @@
-""" App package """
+""" Main App """

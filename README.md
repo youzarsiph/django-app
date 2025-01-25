@@ -1,14 +1,14 @@
-# python-app
+# django-app
 
-[![CI](https://github.com/youzarsiph/python-app/actions/workflows/ci.yml/badge.svg)](https://github.com/youzarsiph/python-app/actions/workflows/ci.yml)
-[![CD](https://github.com/youzarsiph/python-app/actions/workflows/cd.yml/badge.svg)](https://github.com/youzarsiph/python-app/actions/workflows/cd.yml)
-[![Code Style: Black](https://github.com/youzarsiph/python-app/actions/workflows/black.yml/badge.svg)](https://github.com/youzarsiph/python-app/actions/workflows/black.yml)
-[![Code Linting: Ruff](https://github.com/youzarsiph/python-app/actions/workflows/ruff.yml/badge.svg)](https://github.com/youzarsiph/python-app/actions/workflows/ruff.yml)
-[![Code Testing: PyTest](https://github.com/youzarsiph/python-app/actions/workflows/pytest.yml/badge.svg)](https://github.com/youzarsiph/python-app/actions/workflows/pytest.yml)
-[![PyPI - Version](https://img.shields.io/pypi/v/python-app?logo=pypi&logoColor=white)](https://pypi.org/project/python-app/)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/python-app?logo=python&logoColor=white)](https://pypi.org/project/python-app/)
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/python-app?logo=pypi&logoColor=white)](https://pypi.org/project/python-app/)
-[![PyPI - License](https://img.shields.io/pypi/l/python-app?logo=pypi&logoColor=white)](https://pypi.org/project/python-app/)
+[![CI](https://github.com/youzarsiph/django-app/actions/workflows/ci.yml/badge.svg)](https://github.com/youzarsiph/django-app/actions/workflows/ci.yml)
+[![CD](https://github.com/youzarsiph/django-app/actions/workflows/cd.yml/badge.svg)](https://github.com/youzarsiph/django-app/actions/workflows/cd.yml)
+[![Code Style: Black](https://github.com/youzarsiph/django-app/actions/workflows/black.yml/badge.svg)](https://github.com/youzarsiph/django-app/actions/workflows/black.yml)
+[![Code Linting: Ruff](https://github.com/youzarsiph/django-app/actions/workflows/ruff.yml/badge.svg)](https://github.com/youzarsiph/django-app/actions/workflows/ruff.yml)
+[![Code Testing](https://github.com/youzarsiph/django-app/actions/workflows/tests.yml/badge.svg)](https://github.com/youzarsiph/django-app/actions/workflows/tests.yml)
+[![PyPI - Version](https://img.shields.io/pypi/v/django-app?logo=pypi&logoColor=white)](https://pypi.org/project/django-app/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-app?logo=python&logoColor=white)](https://pypi.org/project/django-app/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/django-app?logo=pypi&logoColor=white)](https://pypi.org/project/django-app/)
+[![PyPI - License](https://img.shields.io/pypi/l/django-app?logo=pypi&logoColor=white)](https://pypi.org/project/django-app/)
 
 ## Overview
 
@@ -20,7 +20,7 @@ This repository serves as a comprehensive Python application template designed t
 - **Dependency Management**: Powered by Poetry, a sophisticated tool for managing project dependencies with precision and reliability.
 - **Code Formatting**: Automatically formatted with Black to maintain a consistent and readable codebase.
 - **Code Linting**: Utilizes Ruff to identify and address potential issues early, enhancing code quality and maintainability.
-- **Code Testing**: Utilizes PyTest to run tests.
+- **Code Testing**: Utilizes Django to run tests.
 - **Configuration Files**: Includes `.gitignore`, `pyproject.toml`, and other essential configuration files to streamline setup.
 
 ## Quick Start Guide
@@ -52,10 +52,50 @@ To initiate a new project using this template, follow these steps:
      poetry install
      ```
 
-4. **Run the Application**:
+4. **Create a new Django project**:
 
    ```bash
-   poetry run python app/main.py
+   poetry run python -m django startproject core
+   mv core/* .
+   ```
+
+5. **Configure the app**:
+
+   Open `core/settings.py`:
+
+   ```python
+   # Add the following line
+   AUTH_USER_MODEL = "users.User"
+
+   # Application definition
+   INSTALLED_APPS = [
+      # Add the app to INSTALLED_APPS
+      "app",
+      "app.books",
+      "app.users",
+      # Default apps
+      ...
+   ]
+   ```
+
+   Open `core/urls.py`:
+
+   ```python
+   # Import `include`
+   from django.urls import path, include
+   
+   
+   urlpatterns = [
+      # Include `app.urls`
+      path("", include("app.urls")),
+      ...
+   ]
+   ```
+
+6. **Run the Application**:
+
+   ```bash
+   poetry run python manage.py runserver
    ```
 
 ## Contributing
@@ -64,7 +104,7 @@ We warmly welcome contributions from the community. Please refer to our [CONTRIB
 
 ## Support
 
-For inquiries or support, please open an issue or join the discussion in the [GitHub Discussions](https://github.com/youzarsiph/python-app/discussions) section to engage with the community.
+For inquiries or support, please open an issue or join the discussion in the [GitHub Discussions](https://github.com/youzarsiph/django-app/discussions) section to engage with the community.
 
 ## Licensing
 
