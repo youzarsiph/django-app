@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "django-app"
 version = "0.1.0"
-description = "A python app template with dependency management and DevOps best practices."
+description = "A Django app template with dependency management and DevOps best practices."
 authors = ["Yousef Abu Shanab <josephyousef249@gmail.com>"]
 license = "MIT"
 readme = "README.md"
