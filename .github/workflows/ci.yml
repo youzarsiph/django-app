@@ -34,5 +34,5 @@ jobs:
       - name: Run the app
         run: |
           source .venv/bin/activate
-          python -m poetry run python manage.py check
-          python -m poetry run python manage.py runserver
+          python -m poetry run python core/manage.py check
+          python -m poetry run python core/manage.py runserver
