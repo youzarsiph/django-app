@@ -1,4 +1,4 @@
-""" Views for app.books """
+"""Views for app.books"""
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy

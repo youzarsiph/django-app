@@ -1,4 +1,4 @@
-""" URLConf for app.books """
+"""URLConf for app.books"""
 
 from django.urls import path
 

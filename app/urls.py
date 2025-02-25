@@ -1,4 +1,4 @@
-""" Main App URLConf """
+"""Main App URLConf"""
 
 from django.urls import path, include
 

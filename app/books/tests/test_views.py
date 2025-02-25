@@ -1,4 +1,4 @@
-""" Tests for app.books.views """
+"""Tests for app.books.views"""
 
 from django.test import TestCase
 
