@@ -5,6 +5,8 @@
 [![Code Style: Black](https://github.com/youzarsiph/django-app/actions/workflows/black.yml/badge.svg)](https://github.com/youzarsiph/django-app/actions/workflows/black.yml)
 [![Code Linting: Ruff](https://github.com/youzarsiph/django-app/actions/workflows/ruff.yml/badge.svg)](https://github.com/youzarsiph/django-app/actions/workflows/ruff.yml)
 [![Code Testing](https://github.com/youzarsiph/django-app/actions/workflows/tests.yml/badge.svg)](https://github.com/youzarsiph/django-app/actions/workflows/tests.yml)
+[![Docker Image](https://github.com/youzarsiph/django-app/actions/workflows/docker-image.yml/badge.svg)](https://github.com/youzarsiph/django-app/actions/workflows/docker-image.yml)
+[![Docker Publish](https://github.com/youzarsiph/django-app/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/youzarsiph/django-app/actions/workflows/docker-publish.yml)
 [![PyPI - Version](https://img.shields.io/pypi/v/django-app?logo=pypi&logoColor=white)](https://pypi.org/project/django-app/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-app?logo=python&logoColor=white)](https://pypi.org/project/django-app/)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/django-app?logo=pypi&logoColor=white)](https://pypi.org/project/django-app/)
